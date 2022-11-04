@@ -1,1 +1,7 @@
-"# Rulett" 
+# A rulett
+A rulett egy főleg kaszinókban és játéktermekben elterjedt szerencsejáték. Neve a francia roulette, azaz kis kerék kifejezésből ered. Története egészen az ókorig vezethető vissza, de pontos eredetére több elmélet is létezik, azonban ezek egyike sem bizonyított.
+
+A játék lényege, hogy a játékvezető (krupié) által, a tárcsa forgási irányával ellentétesen elgurított golyónak a megérkezési pozíciójára lehet fogadni. Minden boxhoz szám és szín tartozik, ezek különböző kombinációjára lehet tétet helyezni. A tétek az eséllyel közel arányos nyereményekkel kecsegtetik a játékosokat. (A bank nyerési esélye minden létező tétkombinációban egy kicsivel magasabb.)
+
+Alapvetően három fajtája ismert: az amerikai (duplanullás), a francia, és az angol rulett. Európában a francia rulett a leginkább elterjedt, míg az amerikai kaszinókban – leginkább a külföldi vendégek miatt – az amerikai és a francia rulettel is találkozhatnak a játékosok. Az angol rulett, egy érdekes keveréke az amerikai és francia változatnak: amerikai cilinderrel, de egy nullával játsszák, a játékot francia kifejezésekkel vezetik, és ráadásként az angol rulettet a britek amerikai rulettként ismerik (itt a játékvezető megnevezése dealer
+![image](stock-vector-online-casino-roulette-and-gambling-table-with-chips-vector-set-illustration-design-roulette-table-653624677.jpg)
