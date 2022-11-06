@@ -1,0 +1,11 @@
+#tabla{
+    margin: 0 auto;
+    width: fit-content;
+    
+}
+td{
+    border: 2px solid white;
+}
+body{
+    background-color: green;
+}
