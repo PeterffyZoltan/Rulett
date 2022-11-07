@@ -1,0 +1,19 @@
+body{
+    background-color: green;
+}
+#tabla{
+    margin: 0 auto;
+    width: fit-content;
+}
+td{
+    border: 2px solid white;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+td:hover{
+    background-color: yellow;
+}
+.nemlatszik{
+    border: 0;
+}

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="table.css">
+</head>
+<body>
+    <div id="tabla">
+        <table>
+            <tr>
+                <td class="nemlatszik"></td>
+                <td class="nemlatszik"></td>
+                <td colspan="3"><div onclick="betNumber(this)" >0</div></td>
+            </tr>
+            <tr>
+                <td rowspan="2">
+                    <div onclick="betFiftyPercent(this)">1 to 18</div>
+                </td>
+                <td rowspan="4">
+                    <div id onclick="betDozen(this)">1st 12</div>
+                </td>
+                <td>
+                    <div onclick="oneNumber(this)">1</div>
+                </td>
+                <td>
+                    <div onclick="betNumber(this)">2</div>
+                </td>
+                <td>
+                    <div onclick="betNumber(this)">3</div>
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    <div onclick="betNumber(this)">4</div>
+                </td>
+                <td>
+                    <div onclick="betNumber(this)">5</div>
+                </td>
+                <td>
+                    <div onclick="betNumber(this)">6</div>
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="2">
+                    <div onclick="betFiftyPercent(this)">EVEN</div>
+                </td>
+                <td>
+                    <div onclick="betNumber(this)">7</div>
+                </td>
+                <td>
+                    <div onclick="betNumber(this)">8</div>
+                </td>
+                <td>
+                    <div onclick="betNumber(this)">9</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div onclick="betNumber(this)">10</div>
+                </td>
+                <td>
+                    <div onclick="betNumber(this)">11</div>
+                </td>
+                <td>
+                    <div onclick="betNumber(this)">12</div>
+                </td>
+            </tr>
+
+
+
+            <tr>
+                <td rowspan="2">
+                    <div onclick="betFiftyPercent(this)">Red</div>
+                </td>
+                <td rowspan="4">
+                    <div onclick="betDozen(this)">2nd 12</div>
+                </td>
+                <td>
+                    <div onclick="betNumber(this)">13</div>
+                </td>
+                <td>
+                    <div onclick="betNumber(this)">14</div>
+                </td>
+                <td>
+                    <div onclick="betNumber(this)">15</div>
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    <div onclick="betNumber(this)">16</div>
+                </td>
+                <td>
+                    <div onclick="betNumber(this)">17</div>
+                </td>
+                <td>
+                    <div onclick="betNumber(this)">18</div>
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="2">
+                    <div onclick="betFiftyPercent(this)">Black</div>
+                </td>
+                <td>
+                    <div onclick="betNumber(this)">19</div>
+                </td>
+                <td>
+                    <div onclick="betNumber(this)">20</div>
+                </td>
+                <td>
+                    <div onclick="betNumber(this)">21</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div onclick="betNumber(this)">22</div>
+                </td>
+                <td>
+                    <div onclick="betNumber(this)">23</div>
+                </td>
+                <td>
+                    <div onclick="betNumber(this)">24</div>
+                </td>
+            </tr>
+
+
+
+            <tr>
+                <td rowspan="2">
+                    <div onclick="betFiftyPercent(this)">Odd</div>
+                </td>
+                <td rowspan="4">
+                    <div onclick="betDozen(this)">3rd 12</div>
+                </td>
+                <td>
+                    <div onclick="betNumber(this)">25</div>
+                </td>
+                <td>
+                    <div onclick="betNumber(this)">26</div>
+                </td>
+                <td>
+                    <div onclick="betNumber(this)">27</div>
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    <div onclick="betNumber(this)">28</div>
+                </td>
+                <td>
+                    <div onclick="betNumber(this)">29</div>
+                </td>
+                <td>
+                    <div onclick="betNumber(this)">30</div>
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="2">
+                    <div onclick="betFiftyPercent(this)">19 to 36</div>
+                </td>
+                <td>
+                    <div onclick="betNumber(this)">31</div>
+                </td>
+                <td>
+                    <div onclick="betNumber(this)">32</div>
+                </td>
+                <td>
+                    <div onclick="betNumber(this)">33</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div onclick="betNumber(this)">34</div>
+                </td>
+                <td>
+                    <div onclick="betNumber(this)">35</div>
+                </td>
+                <td>
+                    <div onclick="betNumber(this)">36</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="nemlatszik"></td>
+                <td class="nemlatszik"></td>
+                <td onclick="betColumn(this)" id="elsoOszlop">1st column</td>
+                <td onclick="betColumn(this)">2nd column</td>
+                <td onclick="betColumn(this)">3rd column</td>
+            </tr>
+
+        </table>
+    </div>
+
+
+    <script src="table.js"></script>
+</body>
+</html>
