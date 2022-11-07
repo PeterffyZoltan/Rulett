@@ -1,0 +1,30 @@
+:root{
+    --kerek-meret: 100vmin;
+    --labda-meret: 3vmin;
+}
+body{
+    background-color: green;
+}
+.kerek-wrapper{
+display: flex;
+    position: relative;
+    width: var(--kerek-meret);
+    height: var(--kerek-meret);
+
+
+}
+#kerek{
+    display: block;
+    height: var(--kerek-meret);
+    align-self: center;
+}
+#labda{
+    position: absolute;
+    height: var(--labda-meret);
+    width: var(--labda-meret);
+    background-color: white;
+    border-radius: var(--labda-meret);
+
+
+
+}
