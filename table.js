@@ -65,7 +65,111 @@ function betColumn(column) {
         
     }
 }
-function columnHover(col) {
-    col = col.innerText.replace(' ','_');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function hoverDozen(dozen) {
+    Nums = []
+    if(dozen.innerText == "1st 12"){
+        Nums = document.getElementsByClassName('elsoTizenketto');
+
+    }
+    else if(dozen.innerText=="2nd 12"){
+        Nums = document.getElementsByClassName('masodikTizenketto');
+
+    }
+    else{
+        Nums = document.getElementsByClassName('harmadikTizenketto');
+
+    }
+    for (let index = 0; index < Nums.length; index++) {
+        Nums[index].style.backgroundColor = 'yellow';
+        
+    }
     
+}
+function noHoverDozen(dozen) {
+    Nums = [];
+    if(dozen.innerText == "1st 12"){
+        Nums = document.getElementsByClassName('elsoTizenketto');
+    }
+    else if(dozen.innerText=="2nd 12"){
+        Nums = document.getElementsByClassName('masodikTizenketto');
+    }
+    else{
+        Nums = document.getElementsByClassName('harmadikTizenketto');
+
+    }
+    for (let index = 0; index < Nums.length; index++) {
+        Nums[index].style.backgroundColor = '';
+        
+    }
+}
+function hoverHalf(half) {
+    Nums = []
+    if (half.innerText == "1 to 18") {
+        Nums = document.getElementsByClassName('elsoFele');
+    }
+    else if (half.innerText == "19 to 36") {
+        Nums = document.getElementsByClassName('masodikFele');
+        }
+    for (let index = 0; index < Nums.length; index++) {
+        Nums[index].style.backgroundColor = 'yellow';
+        
+    }
+}
+function noHoverHalf(half) {
+    Nums = []
+    if (half.innerText == "1 to 18") {
+        Nums = document.getElementsByClassName('elsoFele');
+    }
+    else if (half.innerText == "19 to 36") {
+        Nums = document.getElementsByClassName('masodikFele');
+        }
+    for (let index = 0; index < Nums.length; index++) {
+        Nums[index].style.backgroundColor = '';
+        
+    }
+}
+function hoverColumn(col) {
+    Nums = [];
+    if (col.innerText== '1st column') {
+        Nums = document.getElementsByClassName('elsoOszlop');
+    }
+    else if(col.innerText == '2nd column'){
+        Nums = document.getElementsByClassName('masodikOszlop');
+    }
+    for (let index = 0; index < Nums.length; index++) {
+        Nums[index].style.backgroundColor = 'yellow';
+    }
+}
+function noHoverColumn(col) {
+    Nums = [];
+    if (col.innerText== '1st column') {
+        Nums = document.getElementsByClassName('elsoOszlop');
+    }
+    else if(col.innerText == '2nd column'){
+        Nums = document.getElementsByClassName('masodikOszlop');
+    }
+    for (let index = 0; index < Nums.length; index++) {
+        Nums[index].style.backgroundColor = '';
+    }
 }

@@ -1,19 +1,26 @@
 body{
     background-color: green;
 }
-#tabla{
-    margin: 0 auto;
-    width: fit-content;
-}
-td{
-    border: 2px solid white;
-    margin: 0;
-    padding: 0;
+
+#tablaDiv table{ 
+    background-color: white;
+    border-collapse:collapse;
+    border-radius: 100%;
+ }
+#tablaDiv td { 
+    background-color:green;
+    color:white;
     text-align: center;
+    border:1px solid white; 
 }
-td:hover{
-    background-color: yellow;
+
+#tablaDiv td:hover{
+    background-color: yellow!important;
 }
 .nemlatszik{
-    border: 0;
+    border: 0!important;
+    
+}
+#tablaDiv table .nemlatszik:hover{
+    background-color: green!important;
 }
