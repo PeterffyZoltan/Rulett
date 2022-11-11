@@ -17,3 +17,6 @@ td:hover{
 .nemlatszik{
     border: 0;
 }
+.nemlatszik:hover{
+    background-color: green;
+}
