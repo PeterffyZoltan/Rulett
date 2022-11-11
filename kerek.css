@@ -1,21 +1,21 @@
 :root{
-    --kerek-meret: 100vmin;
     --labda-meret: 3vmin;
 }
 body{
     background-color: green;
 }
-.kerek-wrapper{
-display: flex;
+.wrapper{
+    display: flex;
     position: relative;
-    width: var(--kerek-meret);
-    height: var(--kerek-meret);
+    width: 100vmin;
+    height: 100vmin;
 
 
 }
 #kerek{
     display: block;
-    height: var(--kerek-meret);
+    height: 90%;
+    width: 90%;
     align-self: center;
 }
 #labda{
@@ -24,7 +24,13 @@ display: flex;
     width: var(--labda-meret);
     background-color: white;
     border-radius: var(--labda-meret);
+    left: 48.5%;
 
 
-
+}
+#labda-wrapper{
+    top: 5%;
+    position: absolute;
+    height: 90%;
+    width: 90%;
 }
