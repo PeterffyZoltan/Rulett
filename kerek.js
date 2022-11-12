@@ -52,7 +52,7 @@ function porget() {
             clearInterval(forgatas)
 
         }
-    }, 1);    
+    }, 15);    
  
 }
 
