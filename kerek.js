@@ -6,6 +6,7 @@ const labdaWrap = document.getElementById('labda-wrapper');
 const labda = document.getElementById('labda');
 let nyertesszam;
 const rulettSzamokSorrend = [0, 32, 15, 19, 4, 21, 2, 25, 17, 34, 6, 27, 13, 36, 11, 30, 8, 23, 10, 5, 24, 16, 33, 1, 20, 14, 31, 9, 22, 18, 29, 7, 28, 12, 35, 3, 26]
+let bet =  { 14: 17500, 15: 17500, 23: 70000 };
 function porget() {
 
     if (porgete) {
@@ -49,6 +50,7 @@ function porget() {
         labda.style.top = String(labdaHelyzet) + "%";
         if (osszPorgetes < 10) {
             porgete = false;
+            nyertE()
             clearInterval(forgatas)
 
         }
@@ -62,6 +64,15 @@ function labdaMegakad(){
 
     labdaForgHelyzet = (nyertesszam * (360/37)) + kerekHelyzet;
     nyertesszam = rulettSzamokSorrend[(nyertesszam+37)%37]
+
 }
 
+function nyertE(){
+    if (bet[nyertesszam] != undefined) {
+        console.log("nyertél");
+    }
+    else{
+        console.log("vesztettél");
 
+    }
+}
