@@ -20,49 +20,138 @@ function betNumber(num) {
 }
 function betDozen(dozen) {
     if (allMoney>= bet) {
-        dozen = dozen.innerText.replace(' ','_');
-        if (bets[dozen] >= bet*2) {
-            bets[dozen] += bet*2;
-        }else{
-            bets[dozen] = bet*2;
-
+        if (dozen.innerText == '1st 12') {
+            for (let index = 0; index < elsoTizenketto.length; index++) {
+                let element = elsoTizenketto[index];
+                if (bets[element] > 0) {
+                    bets[element] += bet*2;
+                    console.log(bets)
+                }
+                else{
+                    bets[element]= bet*2;
+                    console.log(bets)
+                }
+            }
+            allMoney-=bet;
         }
-        allMoney-=bet;
-        console.log(bets);
+        else if (dozen.innerText == '2nd 12') {
+            for (let index = 0; index < masodikTizenketto.length; index++) {
+                let element = masodikTizenketto[index];
+                if (bets[element] > 0) {
+                    bets[element] += bet*2;
+                }
+                else{
+                    bets[element]= bet*2;
+                }
+            }
+            allMoney-=bet;
+        }
+        else{
+            for (let index = 0; index < harmadikTizenketto.length; index++) {
+                let element = harmadikTizenketto[index];
+                if (bets[element] > 0) {
+                    bets[element] += bet*2;
+                }
+                else{
+                    bets[element]= bet*2;
+                }
+            }
+            allMoney-=bet;
+        }
     }
 }
 function betFiftyPercent(field) {
     if (allMoney>= bet) {
-        if (' ' in field){
-            field = field.innerText.replace(' ','_');
-        }else{
-            field = field.innerText;
+        if (field.innerText = '1 to 18') {
+            for (let szam = 1; szam < 19; szam++) {
+                const element = szam;
+                if (bets[element] > 0) {
+                    bets[element] += bet*1;
+                }else{
+                    bets[element] = bet*1;
+                }
+            }
+            allMoney-=bet;
         }
-    
-        if (bets[field] >= bet*1) {
-            bets[field] += bet*1;
-        }else{
-            bets[field] = bet*1;
-    
+        else if(field.innerText = '19 to 36'){
+            for (let szam = 19; szam < 37; szam++) {
+                const element = szam;
+                if (bets[element] > 0) {
+                    bets[element] += bet*1;
+                }else{
+                    bets[element] = bet*1;
+                }
+            }
+            allMoney-=bet;
         }
-        allMoney-=bet;
-    
-        console.log(bets);
-    }
-}
+        else if(field.innerText = 'EVEN'){
+            for (let index = 0; index < parosok.length; index++) {
+                const element = parosok[index];
+                if (bets[element] > 0) {
+                    bets[element] += bet*1;
+                }else{
+                    bets[element] = bet*1;
+                }
+                
+            }
+            allMoney-=bet;
+        }
+        else if(field.innerText = 'ODD'){
+            for (let index = 0; index < paratlanok.length; index++) {
+                const element = parosok[index];
+                if (bets[element] > 0) {
+                    bets[element] += bet*1;
+                }else{
+                    bets[element] = bet*1;
+                }
+            }
+            allMoney-=bet;
+        }
+        else if(field.innerText='RED'){
+            for (let index = 0; index < pirosak.length; index++) {
+                const element = pirosak[index];
+                if (bets[element] > 0) {
+                    bets[element] += bet*1;
+                }else{
+                    bets[element] = bet*1;
+                }
+            }
+            allMoney-=bet;
+        }
+        else if(field.innerText='BLACK'){
+            for (let index = 0; index < feketek.length; index++) {
+                const element = feketek[index];
+                if (bets[element] > 0) {
+                    bets[element] += bet*1;
+                }else{
+                    bets[element] = bet*1;
+                }
+            }
+            allMoney-=bet;
+        }
+}}
+
+
+
 function betColumn(column) {
     if (allMoney>=bet) {
-        column = column.innerText.replace(' ','_');
-        if (bets[column] >= bet*1) {
-            bets[column] += bet*1;
-        }else{
-            bets[column] = bet*1;
-    
+        if(column.innerText = '1st column'){
+            for (let index = 0; index < elsoOszlop.length; index++) {
+                const element = elsoOszlop[index];
+                if (bets[element] > 0) {
+                    bets[element] += bet*1;
+                }else{
+                    bets[element] = bet*1;
+                }
+            }
+            allMoney-=bet;
         }
-        allMoney-=bet;
-    
-        console.log(bets);
-        
+        else if(column.innerText = '2nd column'){
+
+        }
+        else{
+
+        }
     }
 }
 
@@ -168,6 +257,9 @@ function noHoverColumn(col) {
     }
     else if(col.innerText == '2nd column'){
         Nums = document.getElementsByClassName('masodikOszlop');
+    }
+    else{
+        Nums = document.getElementsByClassName('harmadikOszlop');
     }
     for (let index = 0; index < Nums.length; index++) {
         Nums[index].style.backgroundColor = '';
