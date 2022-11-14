@@ -20,10 +20,10 @@ body{
 }
 #labda{
     position: absolute;
-    height: var(--labda-meret);
-    width: var(--labda-meret);
+    height: 3%;
+    width:3%;
     background-color: white;
-    border-radius: var(--labda-meret);
+    border-radius: 100%;
     left: 48.5%;
 
 
@@ -34,3 +34,12 @@ body{
     height: 90%;
     width: 90%;
 }
+/* .kozepAbsolute{
+    position: absolute;
+    height: 60vmin;
+    width: 90vmin;
+    background-color: white;
+    z-index: 100;
+    left: calc((100vw - 90vmin)/2);
+    top: calc((100vh - 60vmin)/2);
+} */
