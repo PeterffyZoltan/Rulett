@@ -24,3 +24,9 @@ body{
 #tablaDiv table .nemlatszik:hover{
     background-color: green!important;
 }
+.piros{
+    background-color: red;
+}
+.fekete{
+    background-color: black;
+}
