@@ -13,6 +13,20 @@ const masodikOszlop = [2,5,8,11,14,17,20,23,26,29,32,35];
 const harmadikOszlop = [3,6,9,12,15,18,21,24,27,30,33,36];
 const parosok = [2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36];
 const paratlanok = [1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35];
+
+function moneyChange() {
+    const moneyDiv = document.getElementById('moneyValue');
+    moneyDiv.innerText = `Money = ${allMoney}`;
+
+}
+function clearBet() {
+    const moneyDiv = document.getElementById('moneyValue');
+    allMoney = allMoney + oneRound;
+    oneRound = 0;
+    moneyDiv.innerText =  `Money = ${allMoney}`;
+    bets = {}
+
+}
 function betNumber(num) {
     if (allMoney>= bet) {
         if (bets[num.innerText] > 0) {
@@ -24,7 +38,7 @@ function betNumber(num) {
         allMoney-=bet;
         oneRound+=bet;
         console.log(bets);
-        
+        moneyChange();
     }
 }
 function betDozen(dozen) {
@@ -43,6 +57,8 @@ function betDozen(dozen) {
             }
             allMoney-=bet;
             oneRound+=bet;
+            moneyChange();
+
         }
         else if (dozen.innerText == '2nd 12') {
             for (let index = 0; index < masodikTizenketto.length; index++) {
@@ -56,6 +72,7 @@ function betDozen(dozen) {
             }
             allMoney-=bet;
             oneRound+=bet;
+            moneyChange();
         }
         else{
             for (let index = 0; index < harmadikTizenketto.length; index++) {
@@ -69,6 +86,7 @@ function betDozen(dozen) {
             }
             allMoney-=bet;
             oneRound+=bet;
+            moneyChange();
         }
     }
 }
@@ -85,6 +103,7 @@ function betFiftyPercent(field) {
             }
             allMoney-=bet;
             oneRound+=bet;
+            moneyChange();
         }
         else if(field.innerText = '19 to 36'){
             for (let szam = 19; szam < 37; szam++) {
@@ -97,6 +116,7 @@ function betFiftyPercent(field) {
             }
             allMoney-=bet;
             oneRound+=bet;
+            moneyChange();
         }
         else if(field.innerText = 'EVEN'){
             for (let index = 0; index < parosok.length; index++) {
@@ -110,6 +130,7 @@ function betFiftyPercent(field) {
             }
             allMoney-=bet;
             oneRound+=bet;
+            moneyChange();
         }
         else if(field.innerText = 'ODD'){
             for (let index = 0; index < paratlanok.length; index++) {
@@ -122,6 +143,7 @@ function betFiftyPercent(field) {
             }
             allMoney-=bet;
             oneRound+=bet;
+            moneyChange();
         }
         else if(field.innerText='RED'){
             for (let index = 0; index < pirosak.length; index++) {
@@ -134,6 +156,7 @@ function betFiftyPercent(field) {
             }
             allMoney-=bet;
             oneRound+=bet;
+            moneyChange();
         }
         else if(field.innerText='BLACK'){
             for (let index = 0; index < feketek.length; index++) {
@@ -146,6 +169,7 @@ function betFiftyPercent(field) {
             }
             allMoney-=bet;
             oneRound+=bet;
+            moneyChange();
         }
 }
 }
@@ -165,6 +189,7 @@ function betColumn(column) {
             }
             allMoney-=bet;
             oneRound+=bet;
+            moneyChange();
         }
         else if(column.innerText = '2nd column'){
             for (let index = 0; index < masodikOszlop.length; index++) {
@@ -177,6 +202,7 @@ function betColumn(column) {
             }
             allMoney-=bet;
             oneRound+=bet;
+            moneyChange();
         }
         else{
             for (let index = 0; index < harmadikOszlop.length; index++) {
@@ -189,6 +215,7 @@ function betColumn(column) {
             }
             allMoney-=bet;
             oneRound+=bet;
+            moneyChange();
         }
     }
 }
