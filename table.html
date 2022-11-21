@@ -8,203 +8,224 @@
     <link rel="stylesheet" href="table.css">
 </head>
 <body>
-    <div id="moneyValue">
-        Money = 5000
+    <div class="content">
+        <!---------- PÉNZ, GOMBOK ---------------->
+        <div id="moneyValue">
+            Money = 5000
+        </div>
+        <div>
+            <button id="clearBets" onclick="clearBet()">
+                Clear bets
+            </button>
+        </div>
+        <!-- ------------------------------------ -->
+
+        <!-- ----------------KERÉK----------------- -->
+        
+        <div class="wrapper">
+
+            <img src="European-Wheel.png" onclick="porget()" id="kerek" alt="">
+
+            <div id="labda-wrapper" onclick="porget()">
+                <div id="labda"></div>
+            </div>        
+        </div>
+        <!-- -------------------------------------- -->
+
+        <!-- -------------------BET TÁBLA------------------------- -->
+        <div id="tablaDiv">
+            <table>
+                <tr>
+                    <td class="nemlatszik"></td>
+                    <td class="nemlatszik"></td>
+                    <td colspan="3" onclick="betNumber(this)"><div>0</div></td>
+                </tr>
+                <tr>
+                    <td rowspan="2" onmouseenter="hoverHalf(this)" onmouseleave="noHoverHalf(this)" onclick="betFiftyPercent(this)">
+                        <div>1 to 18</div>
+                    </td>
+                    <td rowspan="4" onmouseenter="hoverDozen(this)" onmouseleave="noHoverDozen(this)" onclick="betDozen(this)">
+                        <div>1st 12</div>
+                    </td>
+                    <td onclick="betNumber(this)" >
+                        <div class="elsoTizenketto elsoFele elsoOszlop paratlan piros">1</div>
+                    </td>
+                    <td onclick="betNumber(this)">
+                        <div class="elsoTizenketto elsoFele masodikOszlop paros fekete">2</div>
+                    </td>
+                    <td onclick="betNumber(this)">
+                        <div class="elsoTizenketto elsoFele harmadikOszlop paratlan piros">3</div>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td onclick="betNumber(this)">
+                        <div onclick="betNumber(this)"class="elsoTizenketto elsoFele elsoOszlop fekete paros">4</div>
+                    </td>
+                    <td onclick="betNumber(this)">
+                        <div class="elsoTizenketto elsoFele masodikOszlop piros paratlan">5</div>
+                    </td>
+                    <td onclick="betNumber(this)">
+                        <div class="elsoTizenketto elsoFele harmadikOszlop fekete paros">6</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td rowspan="2" onclick="betFiftyPercent(this)" onmouseenter="hoverEvenOdd(this)" onmouseleave="noHoverEvenOdd(this)">
+                        <div>EVEN</div>
+                    </td>
+                    <td onclick="betNumber(this)">
+                        <div class="elsoTizenketto elsoFele elsoOszlop piros paratlan">7</div>
+                    </td>
+                    <td onclick="betNumber(this)">
+                        <div class="elsoTizenketto elsoFele masodikOszlop fekete paros">8</div>
+                    </td>
+                    <td onclick="betNumber(this)">
+                        <div class="elsoTizenketto elsoFele harmadikOszlop paratlan piros">9</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td onclick="betNumber(this)">
+                        <div class="elsoTizenketto elsoFele elsoOszlop paros fekete">10</div>
+                    </td onclick="betNumber(this)">
+                    <td>
+                        <div class="elsoTizenketto elsoFele masodikOszlop fekete paratlan">11</div>
+                    </td onclick="betNumber(this)">
+                    <td onclick="betNumber(this)">
+                        <div class="elsoTizenketto elsoFele harmadikOszlop piros paros">12</div>
+                    </td>
+                </tr>
+
+
+
+                <tr>
+                    <td rowspan="2" onclick="betFiftyPercent(this)" onmouseenter="hoverColors(this)" onmouseleave="noHoverColors(this)">
+                        <div>RED</div>
+                    </td>
+                    <td rowspan="4" onmouseenter="hoverDozen(this)" onmouseleave="noHoverDozen(this)" onclick="betDozen(this)">
+                        <div>2nd 12</div>
+                    </td>
+                    <td onclick="betNumber(this)">
+                        <div class="masodikTizenketto elsoFele elsoOszlop fekete paratlan">13</div>
+                    </td>
+                    <td onclick="betNumber(this)">
+                        <div class="masodikTizenketto elsoFele masodikOszlop piros paros">14</div>
+                    </td>
+                    <td onclick="betNumber(this)">
+                        <div class="masodikTizenketto elsoFele harmadikOszlop fekete paratlan">15</div>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td onclick="betNumber(this)">
+                        <div class="masodikTizenketto elsoFele elsoOszlop piros paros">16</div>
+                    </td>
+                    <td onclick="betNumber(this)">
+                        <div class="masodikTizenketto elsoFele masodikOszlop fekete paratlan">17</div>
+                    </td>
+                    <td onclick="betNumber(this)">
+                        <div class="masodikTizenketto elsoFele harmadikOszlop piros paros">18</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td rowspan="2" onclick="betFiftyPercent(this)" onmouseenter="hoverColors(this)" onmouseleave="noHoverColors(this)">
+                        <div>BLACK</div>
+                    </td>
+                    <td onclick="betNumber(this)">
+                        <div class="masodikTizenketto masodikFele elsoOszlop piros  paratlan">19</div>
+                    </td>
+                    <td onclick="betNumber(this)">
+                        <div class="masodikTizenketto masodikFele masodikOszlop fekete paros">20</div>
+                    </td>
+                    <td onclick="betNumber(this)">
+                        <div class="masodikTizenketto masodikFele harmadikOszlop piros paratlan">21</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td onclick="betNumber(this)">
+                        <div class="masodikTizenketto masodikFele elsoOszlop fekete paros">22</div>
+                    </td>
+                    <td onclick="betNumber(this)">
+                        <div class="masodikTizenketto masodikFele masodikOszlop piros paratlan">23</div>
+                    </td>
+                    <td onclick="betNumber(this)">
+                        <div class="masodikTizenketto masodikFele harmadikOszlop fekete paros">24</div>
+                    </td>
+                </tr>
+
+
+
+                <tr>
+                    <td rowspan="2" onclick="betFiftyPercent(this)" onmouseenter="hoverEvenOdd(this)" onmouseleave="noHoverEvenOdd(this)">
+                        <div>ODD</div>
+                    </td>
+                    <td rowspan="4"onmouseenter="hoverDozen(this)" onmouseleave="noHoverDozen(this)" onclick="betDozen(this)">
+                        <div>3rd 12</div>
+                    </td>
+                    <td onclick="betNumber(this)">
+                        <div class="harmadikTizenketto masodikFele elsoOszlop piros paratlan">25</div>
+                    </td>
+                    <td onclick="betNumber(this)">
+                        <div class="harmadikTizenketto masodikFele masodikOszlop fekete paros">26</div>
+                    </td>
+                    <td onclick="betNumber(this)">
+                        <div class="harmadikTizenketto masodikFele harmadikOszlop piros paratlan">27</div>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td onclick="betNumber(this)">
+                        <div class="harmadikTizenketto masodikFele elsoOszlop fekete paros">28</div>
+                    </td>
+                    <td onclick="betNumber(this)">
+                        <div class="harmadikTizenketto masodikFele masodikOszlop fekete paratlan">29</div>
+                    </td>
+                    <td onclick="betNumber(this)">
+                        <div class="harmadikTizenketto masodikFele harmadikOszlop piros paros">30</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td rowspan="2" onmouseenter="hoverHalf(this)" onmouseleave="noHoverHalf(this)" onclick="betFiftyPercent(this)">
+                        <div>19 to 36</div>
+                    </td>
+                    <td onclick="betNumber(this)">
+                        <div class="harmadikTizenketto masodikFele elsoOszlop fekete paratlan">31</div>
+                    </td>
+                    <td onclick="betNumber(this)">
+                        <div class="harmadikTizenketto masodikFele masodikOszlop piros paros">32</div>
+                    </td>
+                    <td onclick="betNumber(this)">
+                        <div class="harmadikTizenketto masodikFele harmadikOszlop fekete paratlan">33</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td onclick="betNumber(this)">
+                        <div class="harmadikTizenketto masodikFele elsoOszlop piros paros">34</div>
+                    </td>
+                    <td onclick="betNumber(this)">
+                        <div class="harmadikTizenketto masodikFele masodikOszlop fekete paratlan">35</div>
+                    </td>
+                    <td onclick="betNumber(this)">
+                        <div class="harmadikTizenketto masodikFele harmadikOszlop piros paros">36</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="nemlatszik"></td>
+                    <td class="nemlatszik"></td>
+                    <td onclick="betColumn(this)" id="elsoOszlop" onmouseover="hoverColumn(this)" onmouseleave="noHoverColumn(this)">1st column</td>
+                    <td onclick="betColumn(this)" onmouseover="hoverColumn(this)" onmouseleave="noHoverColumn(this)">2nd column</td>
+                    <td onclick="betColumn(this)" onmouseover="hoverColumn(this)" onmouseleave="noHoverColumn(this)"">3rd column</td>
+                </tr>
+
+            </table>
+        </div>
+        <!-- ------------------------------------------------ -->
+
+        <!-- -----------------ZSETONOK------------------ -->
+
+        
     </div>
-    <div>
-        <button id="clearBets" onclick="clearBet()">
-            Clear bets
-        </button>
-    </div>
-    <div id="tablaDiv">
-        <table>
-            <tr>
-                <td class="nemlatszik"></td>
-                <td class="nemlatszik"></td>
-                <td colspan="3" onclick="betNumber(this)"><div>0</div></td>
-            </tr>
-            <tr>
-                <td rowspan="2" onmouseenter="hoverHalf(this)" onmouseleave="noHoverHalf(this)" onclick="betFiftyPercent(this)">
-                    <div>1 to 18</div>
-                </td>
-                <td rowspan="4" onmouseenter="hoverDozen(this)" onmouseleave="noHoverDozen(this)" onclick="betDozen(this)">
-                    <div>1st 12</div>
-                </td>
-                <td onclick="betNumber(this)" >
-                    <div class="elsoTizenketto elsoFele elsoOszlop paratlan piros">1</div>
-                </td>
-                <td onclick="betNumber(this)">
-                    <div class="elsoTizenketto elsoFele masodikOszlop paros fekete">2</div>
-                </td>
-                <td onclick="betNumber(this)">
-                    <div class="elsoTizenketto elsoFele harmadikOszlop paratlan piros">3</div>
-                </td>
-
-            </tr>
-            <tr>
-                <td onclick="betNumber(this)">
-                    <div onclick="betNumber(this)"class="elsoTizenketto elsoFele elsoOszlop fekete paros">4</div>
-                </td>
-                <td onclick="betNumber(this)">
-                    <div class="elsoTizenketto elsoFele masodikOszlop piros paratlan">5</div>
-                </td>
-                <td onclick="betNumber(this)">
-                    <div class="elsoTizenketto elsoFele harmadikOszlop fekete paros">6</div>
-                </td>
-            </tr>
-            <tr>
-                <td rowspan="2" onclick="betFiftyPercent(this)" onmouseenter="hoverEvenOdd(this)" onmouseleave="noHoverEvenOdd(this)">
-                    <div>EVEN</div>
-                </td>
-                <td onclick="betNumber(this)">
-                    <div class="elsoTizenketto elsoFele elsoOszlop piros paratlan">7</div>
-                </td>
-                <td onclick="betNumber(this)">
-                    <div class="elsoTizenketto elsoFele masodikOszlop fekete paros">8</div>
-                </td>
-                <td onclick="betNumber(this)">
-                    <div class="elsoTizenketto elsoFele harmadikOszlop paratlan piros">9</div>
-                </td>
-            </tr>
-            <tr>
-                <td onclick="betNumber(this)">
-                    <div class="elsoTizenketto elsoFele elsoOszlop paros fekete">10</div>
-                </td onclick="betNumber(this)">
-                <td>
-                    <div class="elsoTizenketto elsoFele masodikOszlop fekete paratlan">11</div>
-                </td onclick="betNumber(this)">
-                <td onclick="betNumber(this)">
-                    <div class="elsoTizenketto elsoFele harmadikOszlop piros paros">12</div>
-                </td>
-            </tr>
-
-
-
-            <tr>
-                <td rowspan="2" onclick="betFiftyPercent(this)" onmouseenter="hoverColors(this)" onmouseleave="noHoverColors(this)">
-                    <div>RED</div>
-                </td>
-                <td rowspan="4" onmouseenter="hoverDozen(this)" onmouseleave="noHoverDozen(this)" onclick="betDozen(this)">
-                    <div>2nd 12</div>
-                </td>
-                <td onclick="betNumber(this)">
-                    <div class="masodikTizenketto elsoFele elsoOszlop fekete paratlan">13</div>
-                </td>
-                <td onclick="betNumber(this)">
-                    <div class="masodikTizenketto elsoFele masodikOszlop piros paros">14</div>
-                </td>
-                <td onclick="betNumber(this)">
-                    <div class="masodikTizenketto elsoFele harmadikOszlop fekete paratlan">15</div>
-                </td>
-
-            </tr>
-            <tr>
-                <td onclick="betNumber(this)">
-                    <div class="masodikTizenketto elsoFele elsoOszlop piros paros">16</div>
-                </td>
-                <td onclick="betNumber(this)">
-                    <div class="masodikTizenketto elsoFele masodikOszlop fekete paratlan">17</div>
-                </td>
-                <td onclick="betNumber(this)">
-                    <div class="masodikTizenketto elsoFele harmadikOszlop piros paros">18</div>
-                </td>
-            </tr>
-            <tr>
-                <td rowspan="2" onclick="betFiftyPercent(this)" onmouseenter="hoverColors(this)" onmouseleave="noHoverColors(this)">
-                    <div>BLACK</div>
-                </td>
-                <td onclick="betNumber(this)">
-                    <div class="masodikTizenketto masodikFele elsoOszlop piros  paratlan">19</div>
-                </td>
-                <td onclick="betNumber(this)">
-                    <div class="masodikTizenketto masodikFele masodikOszlop fekete paros">20</div>
-                </td>
-                <td onclick="betNumber(this)">
-                    <div class="masodikTizenketto masodikFele harmadikOszlop piros paratlan">21</div>
-                </td>
-            </tr>
-            <tr>
-                <td onclick="betNumber(this)">
-                    <div class="masodikTizenketto masodikFele elsoOszlop fekete paros">22</div>
-                </td>
-                <td onclick="betNumber(this)">
-                    <div class="masodikTizenketto masodikFele masodikOszlop piros paratlan">23</div>
-                </td>
-                <td onclick="betNumber(this)">
-                    <div class="masodikTizenketto masodikFele harmadikOszlop fekete paros">24</div>
-                </td>
-            </tr>
-
-
-
-            <tr>
-                <td rowspan="2" onclick="betFiftyPercent(this)" onmouseenter="hoverEvenOdd(this)" onmouseleave="noHoverEvenOdd(this)">
-                    <div>ODD</div>
-                </td>
-                <td rowspan="4"onmouseenter="hoverDozen(this)" onmouseleave="noHoverDozen(this)" onclick="betDozen(this)">
-                    <div>3rd 12</div>
-                </td>
-                <td onclick="betNumber(this)">
-                    <div class="harmadikTizenketto masodikFele elsoOszlop piros paratlan">25</div>
-                </td>
-                <td onclick="betNumber(this)">
-                    <div class="harmadikTizenketto masodikFele masodikOszlop fekete paros">26</div>
-                </td>
-                <td onclick="betNumber(this)">
-                    <div class="harmadikTizenketto masodikFele harmadikOszlop piros paratlan">27</div>
-                </td>
-
-            </tr>
-            <tr>
-                <td onclick="betNumber(this)">
-                    <div class="harmadikTizenketto masodikFele elsoOszlop fekete paros">28</div>
-                </td>
-                <td onclick="betNumber(this)">
-                    <div class="harmadikTizenketto masodikFele masodikOszlop fekete paratlan">29</div>
-                </td>
-                <td onclick="betNumber(this)">
-                    <div class="harmadikTizenketto masodikFele harmadikOszlop piros paros">30</div>
-                </td>
-            </tr>
-            <tr>
-                <td rowspan="2" onmouseenter="hoverHalf(this)" onmouseleave="noHoverHalf(this)" onclick="betFiftyPercent(this)">
-                    <div>19 to 36</div>
-                </td>
-                <td onclick="betNumber(this)">
-                    <div class="harmadikTizenketto masodikFele elsoOszlop fekete paratlan">31</div>
-                </td>
-                <td onclick="betNumber(this)">
-                    <div class="harmadikTizenketto masodikFele masodikOszlop piros paros">32</div>
-                </td>
-                <td onclick="betNumber(this)">
-                    <div class="harmadikTizenketto masodikFele harmadikOszlop fekete paratlan">33</div>
-                </td>
-            </tr>
-            <tr>
-                <td onclick="betNumber(this)">
-                    <div class="harmadikTizenketto masodikFele elsoOszlop piros paros">34</div>
-                </td>
-                <td onclick="betNumber(this)">
-                    <div class="harmadikTizenketto masodikFele masodikOszlop fekete paratlan">35</div>
-                </td>
-                <td onclick="betNumber(this)">
-                    <div class="harmadikTizenketto masodikFele harmadikOszlop piros paros">36</div>
-                </td>
-            </tr>
-            <tr>
-                <td class="nemlatszik"></td>
-                <td class="nemlatszik"></td>
-                <td onclick="betColumn(this)" id="elsoOszlop" onmouseover="hoverColumn(this)" onmouseleave="noHoverColumn(this)">1st column</td>
-                <td onclick="betColumn(this)" onmouseover="hoverColumn(this)" onmouseleave="noHoverColumn(this)">2nd column</td>
-                <td onclick="betColumn(this)" onmouseover="hoverColumn(this)" onmouseleave="noHoverColumn(this)"">3rd column</td>
-            </tr>
-
-        </table>
-    </div>
-
-    
-    
 
     <script src="table.js"></script>
+    <script src="kerek.js"></script>
 </body>
 </html>

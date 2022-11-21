@@ -2,10 +2,64 @@ body{
     background-color: green;
 }
 
+:root{
+    --labda-meret: 3vmin;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 45vw 55vw;
+}
+
+.wrapper{
+    display: flex;
+    position: relative;
+    width: 70vmin;
+    height: 70vmin;
+    justify-content: center;
+    background-color: black;
+
+
+}
+#kerek{
+    display: block;
+    height: 100%;
+    width: 100%;
+    align-self: center;
+}
+#labda{
+    position: absolute;
+    height: 3%;
+    width:3%;
+    background-color: white;
+    border-radius: 100%;
+    left: 48.5%;
+
+
+}
+#labda-wrapper{
+    top: 5%;
+    position: absolute;
+    height: 90%;
+    width: 90%;
+}
+
+#tablaDiv {
+    display: flex;
+    width: 50vw;
+    height: 90vh;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+}
+
 #tablaDiv table{ 
     background-color: white;
     border-collapse:collapse;
     border-radius: 100%;
+    width: 80%;
+    height: 100%;
  }
 #tablaDiv td { 
     background-color:green;
