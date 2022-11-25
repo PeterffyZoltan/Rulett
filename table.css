@@ -1,5 +1,7 @@
 body{
     background-color: green;
+    font-size: 28pt;
+    font-weight: bolder;
 }
 
 :root{
@@ -71,7 +73,7 @@ body{
 }
 
 #tablaDiv td:hover{
-    background-color: yellow!important;
+    background-color: yellowgreen!important;
 }
 .nemlatszik{
     border: 0!important;

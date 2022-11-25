@@ -342,7 +342,7 @@ function hoverColors(field) {
     }
     for (let index = 0; index < Nums.length; index++) {
         const element = Nums[index];
-        element.style.backgroundColor = 'yellow';
+        element.style.backgroundColor = 'yellowgreen';
     }
 }
 function noHoverColors(field) {
@@ -369,7 +369,7 @@ function hoverEvenOdd(field) {
     }
     for (let index = 0; index < Nums.length; index++) {
         const element = Nums[index];
-        element.style.backgroundColor = 'yellow';
+        element.style.backgroundColor = 'yellowgreen';
     }
 }
 function noHoverEvenOdd(field) {
@@ -401,7 +401,7 @@ function hoverDozen(dozen) {
 
     }
     for (let index = 0; index < Nums.length; index++) {
-        Nums[index].style.backgroundColor = 'yellow';
+        Nums[index].style.backgroundColor = 'yellowgreen';
         
     }
     
@@ -432,7 +432,7 @@ function hoverHalf(half) {
         Nums = document.getElementsByClassName('masodikFele');
         }
     for (let index = 0; index < Nums.length; index++) {
-        Nums[index].style.backgroundColor = 'yellow';
+        Nums[index].style.backgroundColor = 'yellowgreen';
         
     }
 }
@@ -461,7 +461,7 @@ function hoverColumn(col) {
         Nums = document.getElementsByClassName('harmadikOszlop');
     }
     for (let index = 0; index < Nums.length; index++) {
-        Nums[index].style.backgroundColor = 'yellow';
+        Nums[index].style.backgroundColor = 'yellowgreen';
     }
 }
 function noHoverColumn(col) {
