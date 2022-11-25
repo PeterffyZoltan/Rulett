@@ -12,44 +12,67 @@ body{
     display: grid;
     grid-template-columns: 45vw 55vw;
     grid-template-areas:
-     "kerek Table"
-     "zseton Table";
+     "kerek table"
+     "zsetonok table";
+     grid-template-rows: 70vh 30vh;
+     align-content: center;
+     align-content: space-around;
+     
 }
+@media screen and (max-width: 1000px){
+    .content {
 
+        grid-template-rows: 50vh 50vh!important;
+        grid-template-columns: min-content;
+        grid-template-areas:
+        "zsetonok kerek"
+        "zsetonok table";
+        justify-content: center;
+
+    }
+    .wrapper{
+        align-self: center;
+    }
+}
 .wrapper{
     display: flex;
     position: relative;
-    width: 70vmin;
-    height: 70vmin;
-    max-width: 45vw;
-    max-height: 45vw;
     justify-content: center;
-    background-color: black;
+
     grid-area: kerek;
+
+    align-items: center;
+    align-content: center;
+
+    aspect-ratio: 1/1;
+    overflow: hidden;
 
 
 }
 #kerek{
     display: block;
-    height: 100%;
-    width: 100%;
+    width: 80%;
+    height: 80%;
     align-self: center;
+    justify-self: center;
+    aspect-ratio: 1/1;
+
 }
 #labda{
     position: absolute;
     height: 3%;
-    width:3%;
     background-color: white;
     border-radius: 100%;
-    left: 48.5%;
+    left: 49.2%;
+    aspect-ratio: 1/1;
 
 
 }
 #labda-wrapper{
-    top: 5%;
+    top: 10%;
     position: absolute;
-    height: 90%;
-    width: 90%;
+    height: 80%;
+    width: 80%;
 }
 
 #tablaDiv {
@@ -59,16 +82,14 @@ body{
     margin: 0;
     justify-content: center;
     align-items: center;
-    background-color: aqua;
-    grid-area: Table;
+    grid-area: table;
 }
 
 #tablaDiv table{ 
     background-color: white;
     border-collapse:collapse;
     border-radius: 100%;
-    width: 80%;
-    height: 100%;
+
  }
 #tablaDiv td { 
     background-color:green;
