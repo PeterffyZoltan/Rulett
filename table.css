@@ -16,6 +16,8 @@ body{
     position: relative;
     width: 70vmin;
     height: 70vmin;
+    max-width: 45vw;
+    max-height: 45vw;
     justify-content: center;
     background-color: black;
 
@@ -65,7 +67,7 @@ body{
     background-color:green;
     color:white;
     text-align: center;
-    border:1px solid white; 
+    border:3px solid white;
 }
 
 #tablaDiv td:hover{
@@ -79,8 +81,8 @@ body{
     background-color: green!important;
 }
 .piros{
-    background-color: red;
+    background-color: red !important;
 }
 .fekete{
-    background-color: black;
+    background-color: black !important;
 }
