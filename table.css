@@ -9,6 +9,9 @@ body{
 .content {
     display: grid;
     grid-template-columns: 45vw 55vw;
+    grid-template-areas:
+     "kerek Table"
+     "zseton Table";
 }
 
 .wrapper{
@@ -20,6 +23,7 @@ body{
     max-height: 45vw;
     justify-content: center;
     background-color: black;
+    grid-area: kerek;
 
 
 }
@@ -54,6 +58,7 @@ body{
     justify-content: center;
     align-items: center;
     background-color: aqua;
+    grid-area: Table;
 }
 
 #tablaDiv table{ 
@@ -85,4 +90,7 @@ body{
 }
 .fekete{
     background-color: black !important;
+}
+.zsetonok{
+    grid-area: zsetonok;
 }
