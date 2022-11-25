@@ -26,8 +26,7 @@ const paratlanok = [1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35];
 
 
 function porget() {
-    console.log(undefined>1)
-    if (porgete ) {
+    if (porgete) {
         return 0;
     }
     porgete = true
@@ -89,12 +88,13 @@ function labdaMegakad(){
 function nyertE(){
     if (bets.hasOwnProperty(nyertesszam)) {
         allMoney += bets[nyertesszam]
-        kiir("nyertél")
-
+        bets = {};
+        oneRound = 0;
     }
     else if( 0<bets.length || bets.length!= undefined){
         bets = {};
-        kiir("vesztettél")
+        oneRound = 0;
+
     }
     moneyChange();
 }
@@ -110,6 +110,9 @@ function moneyChange() {
 
 }
 function clearBet() {
+    if (porgete) {
+        return;
+    }
     const moneyDiv = document.getElementById('moneyValue');
     allMoney = allMoney + oneRound;
     oneRound = 0;
@@ -118,6 +121,9 @@ function clearBet() {
 
 }
 function betNumber(num) {
+    if (porgete) {
+        return;
+    }
     if (allMoney>= bet) {
         if (bets[num.innerText] > 0) {
             bets[num.innerText] += bet*35;
@@ -132,6 +138,9 @@ function betNumber(num) {
     }
 }
 function betDozen(dozen) {
+    if (porgete) {
+        return;
+    }
     if (allMoney>= bet) {
         if (dozen.innerText == '1st 12') {
             for (let index = 0; index < elsoTizenketto.length; index++) {
@@ -181,6 +190,9 @@ function betDozen(dozen) {
     }
 }
 function betFiftyPercent(field) {
+    if (porgete) {
+        return;
+    }
     if (allMoney>= bet) {
         if (field.innerText = '1 to 18') {
             for (let szam = 1; szam < 19; szam++) {
@@ -267,6 +279,9 @@ function betFiftyPercent(field) {
 
 
 function betColumn(column) {
+    if (porgete) {
+        return;
+    }
     if (allMoney>=bet) {
         if(column.innerText = '1st column'){
             for (let index = 0; index < elsoOszlop.length; index++) {
