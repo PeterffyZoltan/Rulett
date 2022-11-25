@@ -9,17 +9,6 @@
 </head>
 <body>
     <div class="content">
-        <!---------- PÉNZ, GOMBOK ---------------->
-        <div id="moneyValue">
-            Money = 5000
-        </div>
-        <div>
-            <button id="clearBets" onclick="clearBet()">
-                Clear bets
-            </button>
-        </div>
-        <!-- ------------------------------------ -->
-
         <!-- ----------------KERÉK----------------- -->
         
         <div class="wrapper">
@@ -31,6 +20,13 @@
             </div>        
         </div>
         <!-- -------------------------------------- -->
+
+        <!---------- PÉNZ, GOMBOK ---------------->
+        <div id="money">
+            <div id="moneyValue">Money: 5000</div>
+            <button id="clearBets" onclick="clearBet()">Clear bets</button>
+        </div>
+        <!-- ------------------------------------ -->
 
         <!-- -------------------BET TÁBLA------------------------- -->
         <div id="tablaDiv">
@@ -120,9 +116,10 @@
             </table>
         </div>
         <!-- ------------------------------------------------ -->
-        <div class="zseton"></div>
-        <!-- -----------------ZSETONOK------------------ -->
 
+        <!-- -----------------ZSETONOK------------------ -->
+        
+        <div class="zseton"></div>
         
     </div>
 
