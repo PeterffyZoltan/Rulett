@@ -38,7 +38,7 @@ body{
     display: flex;
     position: relative;
     justify-content: center;
-
+    max-height: 70vh;
     grid-area: kerek;
 
     align-items: center;
