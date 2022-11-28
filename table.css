@@ -19,20 +19,21 @@ body{
      align-content: space-around;
      
 }
-@media screen and (max-width: 1000px){
-    .content {
+@media screen and (max-width: 1200px){
+        .content {
 
-        grid-template-rows: 50vh 50vh!important;
-        grid-template-columns: min-content;
-        grid-template-areas:
-        "zsetonok kerek"
-        "zsetonok table";
-        justify-content: center;
-
-    }
-    .wrapper{
-        align-self: center;
-    }
+            grid-template-rows: 80vh!important;
+            grid-template-columns: 80vw;
+            
+            grid-template-areas:
+            "kerek"
+            "zsetonok"
+            "table";
+            justify-content: center;
+        }
+        .wrapper{
+            align-self: center;
+        }
 }
 .wrapper{
     display: flex;
@@ -40,7 +41,6 @@ body{
     justify-content: center;
 
     grid-area: kerek;
-
     align-items: center;
     align-content: center;
 
@@ -153,4 +153,5 @@ body{
 }
 .zsetonok{
     grid-area: zsetonok;
+    background-color: orange;
 }
