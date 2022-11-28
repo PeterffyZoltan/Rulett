@@ -188,7 +188,7 @@ function betFiftyPercent(field) {
         return;
     }
     if (allMoney>= bet) {
-        if (field.innerText = '1 to 18') {
+        if (field.innerText == '1 to 18') {
             for (let szam = 1; szam < 19; szam++) {
                 const element = szam;
                 if (bets[element] > 0) {
@@ -201,7 +201,7 @@ function betFiftyPercent(field) {
             oneRound+=bet;
             moneyChange();
         }
-        else if(field.innerText = '19 to 36'){
+        else if(field.innerText == '19 to 36'){
             for (let szam = 19; szam < 37; szam++) {
                 const element = szam;
                 if (bets[element] > 0) {
@@ -214,7 +214,7 @@ function betFiftyPercent(field) {
             oneRound+=bet;
             moneyChange();
         }
-        else if(field.innerText = 'EVEN'){
+        else if(field.innerText == 'EVEN'){
             for (let index = 0; index < parosok.length; index++) {
                 const element = parosok[index];
                 if (bets[element] > 0) {
@@ -228,7 +228,7 @@ function betFiftyPercent(field) {
             oneRound+=bet;
             moneyChange();
         }
-        else if(field.innerText = 'ODD'){
+        else if(field.innerText == 'ODD'){
             for (let index = 0; index < paratlanok.length; index++) {
                 const element = parosok[index];
                 if (bets[element] > 0) {
@@ -241,7 +241,7 @@ function betFiftyPercent(field) {
             oneRound+=bet;
             moneyChange();
         }
-        else if(field.innerText='RED'){
+        else if(field.innerText == 'RED'){
             for (let index = 0; index < pirosak.length; index++) {
                 const element = pirosak[index];
                 if (bets[element] > 0) {
@@ -254,7 +254,7 @@ function betFiftyPercent(field) {
             oneRound+=bet;
             moneyChange();
         }
-        else if(field.innerText='BLACK'){
+        else if(field.innerText == 'BLACK'){
             for (let index = 0; index < feketek.length; index++) {
                 const element = feketek[index];
                 if (bets[element] > 0) {
@@ -277,7 +277,7 @@ function betColumn(column) {
         return;
     }
     if (allMoney>=bet) {
-        if(column.innerText = '1st column'){
+        if(column.innerText == '1st column'){
             for (let index = 0; index < elsoOszlop.length; index++) {
                 const element = elsoOszlop[index];
                 if (bets[element] > 0) {
@@ -290,7 +290,7 @@ function betColumn(column) {
             oneRound+=bet;
             moneyChange();
         }
-        else if(column.innerText = '2nd column'){
+        else if(column.innerText == '2nd column'){
             for (let index = 0; index < masodikOszlop.length; index++) {
                 const element = masodikOszlop[index];
                 if (bets[element] > 0) {
