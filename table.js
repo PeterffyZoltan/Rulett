@@ -33,7 +33,6 @@ function porget() {
     labdamegall = false
     labdaHelyzet = 1;
     osszPorgetes = Math.floor(Math.random()*(1080-720+1)+720)
-    
     forgatas = setInterval(() => {
         let forgatasMerteke = (360/37/10) *( osszPorgetes/360*3);
         
@@ -88,14 +87,9 @@ function labdaMegakad(){
 function nyertE(){
     if (bets.hasOwnProperty(nyertesszam)) {
         allMoney += bets[nyertesszam]
-        bets = {};
-        oneRound = 0;
     }
-    else if( 0<bets.length || bets.length!= undefined){
-        bets = {};
-        oneRound = 0;
-
-    }
+    bets = {};
+    oneRound = 0;
     moneyChange();
 }
 
