@@ -120,9 +120,9 @@ function betNumber(num) {
     }
     if (allMoney>= bet) {
         if (bets[num.innerText] > 0) {
-            bets[num.innerText] += bet*35;
+            bets[num.innerText] += bet*36;
         }else{
-            bets[num.innerText] = bet*35;
+            bets[num.innerText] = bet*36;
     
         }
         allMoney-=bet;
@@ -140,11 +140,11 @@ function betDozen(dozen) {
             for (let index = 0; index < elsoTizenketto.length; index++) {
                 let element = elsoTizenketto[index];
                 if (bets[element] > 0) {
-                    bets[element] += bet*2;
+                    bets[element] += bet*3;
                     console.log(bets)
                 }
                 else{
-                    bets[element]= bet*2;
+                    bets[element]= bet*3;
                     console.log(bets)
                 }
             }
@@ -157,10 +157,10 @@ function betDozen(dozen) {
             for (let index = 0; index < masodikTizenketto.length; index++) {
                 let element = masodikTizenketto[index];
                 if (bets[element] > 0) {
-                    bets[element] += bet*2;
+                    bets[element] += bet*3;
                 }
                 else{
-                    bets[element]= bet*2;
+                    bets[element]= bet*3;
                 }
             }
             allMoney-=bet;
@@ -171,10 +171,10 @@ function betDozen(dozen) {
             for (let index = 0; index < harmadikTizenketto.length; index++) {
                 let element = harmadikTizenketto[index];
                 if (bets[element] > 0) {
-                    bets[element] += bet*2;
+                    bets[element] += bet*3;
                 }
                 else{
-                    bets[element]= bet*2;
+                    bets[element]= bet*3;
                 }
             }
             allMoney-=bet;
@@ -192,9 +192,9 @@ function betFiftyPercent(field) {
             for (let szam = 1; szam < 19; szam++) {
                 const element = szam;
                 if (bets[element] > 0) {
-                    bets[element] += bet*1;
+                    bets[element] += bet*2;
                 }else{
-                    bets[element] = bet*1;
+                    bets[element] = bet*2;
                 }
             }
             allMoney-=bet;
@@ -205,9 +205,9 @@ function betFiftyPercent(field) {
             for (let szam = 19; szam < 37; szam++) {
                 const element = szam;
                 if (bets[element] > 0) {
-                    bets[element] += bet*1;
+                    bets[element] += bet*2;
                 }else{
-                    bets[element] = bet*1;
+                    bets[element] = bet*2;
                 }
             }
             allMoney-=bet;
@@ -218,9 +218,9 @@ function betFiftyPercent(field) {
             for (let index = 0; index < parosok.length; index++) {
                 const element = parosok[index];
                 if (bets[element] > 0) {
-                    bets[element] += bet*1;
+                    bets[element] += bet*2;
                 }else{
-                    bets[element] = bet*1;
+                    bets[element] = bet*2;
                 }
                 
             }
@@ -232,9 +232,9 @@ function betFiftyPercent(field) {
             for (let index = 0; index < paratlanok.length; index++) {
                 const element = parosok[index];
                 if (bets[element] > 0) {
-                    bets[element] += bet*1;
+                    bets[element] += bet*2;
                 }else{
-                    bets[element] = bet*1;
+                    bets[element] = bet*2;
                 }
             }
             allMoney-=bet;
@@ -245,9 +245,9 @@ function betFiftyPercent(field) {
             for (let index = 0; index < pirosak.length; index++) {
                 const element = pirosak[index];
                 if (bets[element] > 0) {
-                    bets[element] += bet*1;
+                    bets[element] += bet*2;
                 }else{
-                    bets[element] = bet*1;
+                    bets[element] = bet*2;
                 }
             }
             allMoney-=bet;
@@ -258,9 +258,9 @@ function betFiftyPercent(field) {
             for (let index = 0; index < feketek.length; index++) {
                 const element = feketek[index];
                 if (bets[element] > 0) {
-                    bets[element] += bet*1;
+                    bets[element] += bet*2;
                 }else{
-                    bets[element] = bet*1;
+                    bets[element] = bet*2;
                 }
             }
             allMoney-=bet;
@@ -281,9 +281,9 @@ function betColumn(column) {
             for (let index = 0; index < elsoOszlop.length; index++) {
                 const element = elsoOszlop[index];
                 if (bets[element] > 0) {
-                    bets[element] += bet*1;
+                    bets[element] += bet*3;
                 }else{
-                    bets[element] = bet*1;
+                    bets[element] = bet*3;
                 }
             }
             allMoney-=bet;
@@ -294,9 +294,9 @@ function betColumn(column) {
             for (let index = 0; index < masodikOszlop.length; index++) {
                 const element = masodikOszlop[index];
                 if (bets[element] > 0) {
-                    bets[element] += bet*1
+                    bets[element] += bet*3;
                 } else{
-                    bets[element] = bet*1
+                    bets[element] = bet*3;
                 }
             }
             allMoney-=bet;
@@ -307,9 +307,9 @@ function betColumn(column) {
             for (let index = 0; index < harmadikOszlop.length; index++) {
                 const element = harmadikOszlop[index];
                 if (bets[element] > 0) {
-                    bets[element] += bet*1
+                    bets[element] += bet*3
                 } else{
-                    bets[element] = bet*1
+                    bets[element] = bet*3;
                 }
             }
             allMoney-=bet;
@@ -356,10 +356,10 @@ function noHoverColors(field) {
 function hoverEvenOdd(field) {
     Nums = [];
     if (field.innerText == 'ODD') {
-        Nums = document.getElementsByClassName('paros');
+        Nums = document.getElementsByClassName('paratlan');
     }
     else{
-        Nums = document.getElementsByClassName('paratlan');
+        Nums = document.getElementsByClassName('paros');
     }
     for (let index = 0; index < Nums.length; index++) {
         const element = Nums[index];
@@ -369,10 +369,10 @@ function hoverEvenOdd(field) {
 function noHoverEvenOdd(field) {
     Nums = [];
     if (field.innerText == 'ODD') {
-        Nums = document.getElementsByClassName('paros');
+        Nums = document.getElementsByClassName('paratlan');
     }
     else{
-        Nums = document.getElementsByClassName('paratlan');
+        Nums = document.getElementsByClassName('paros');
     }
     for (let index = 0; index < Nums.length; index++) {
         const element = Nums[index];
