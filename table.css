@@ -34,6 +34,9 @@ body{
         .wrapper{
             align-self: center;
         }
+        #tablaDiv {
+            justify-self: center;
+        }
 }
 .wrapper{
     display: flex;
@@ -115,7 +118,7 @@ body{
     margin: 0;
     justify-content: center;
     align-items: center;
-
+    box-sizing: border-box;
     grid-area: table;
 
 }
