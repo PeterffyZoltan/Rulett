@@ -33,10 +33,21 @@ body{
         }
         .wrapper{
             align-self: center;
+            justify-self: center;
+            height: 80vh;
         }
         #tablaDiv {
             justify-self: center;
         }
+
+}
+@media screen and (max-width: 580px){
+    body{
+        font-size: 5vw;
+    }
+    .wrapper{
+        height: 90vw;
+    }
 }
 .wrapper{
     display: flex;
@@ -157,4 +168,11 @@ body{
 .zsetonok{
     grid-area: zsetonok;
     background-color: orange;
+    display: flex;
+    justify-content: space-evenly;    
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    
+
 }
