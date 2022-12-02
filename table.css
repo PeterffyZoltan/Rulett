@@ -175,10 +175,13 @@ body{
     flex-direction: row;
 }
 .zseton_huszonot, .zseton_otven, .zseton_szaz, .zseton_otszaz {
-    width: 170px;
-    height: 170px;
-    border-radius: 50px;
-    background-color: orange;
+display: flex;
+justify-content: center;
+align-items: center;
+width: 185px;
+height: 185px;
+border-radius: 100%;
+
 }
 .zsetonbet{
     width: 50px;

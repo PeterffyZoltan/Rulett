@@ -506,3 +506,13 @@ function coinChanger(coinPic) {
     bet = Number(coinPic.alt);
     valasztottZseton = `${bet}zseton_.png`;
 }
+
+let retardmatevaltozoja;
+
+function pickedCoin(hehe) {
+    hehe.style.backgroundColor= "orange"
+    if (retardmatevaltozoja != null) {
+        retardmatevaltozoja.style.backgroundColor="unset"
+    }
+    retardmatevaltozoja = hehe
+}
