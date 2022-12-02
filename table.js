@@ -473,3 +473,13 @@ function noHoverColumn(col) {
         Nums[index].style.backgroundColor = '';
     }
 }
+
+let retardmatevaltozoja;
+
+function pickedCoin(hehe) {
+    hehe.style.backgroundColor= "orange"
+    if (retardmatevaltozoja != null) {
+        retardmatevaltozoja.style.backgroundColor="unset"
+    }
+    retardmatevaltozoja = hehe
+}
