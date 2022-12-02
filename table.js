@@ -10,7 +10,7 @@ const rulettSzamokSorrend = [0, 32, 15, 19, 4, 21, 2, 25, 17, 34, 6, 27, 13, 36,
 
 var bets = new Object();
 var bets = { };
-var bet = 500;
+var bet = 25;
 var allMoney = 5000;
 var oneRound = 0;
 const elsoTizenketto = [1,2,3,4,5,6,7,8,9,10,11,12];
@@ -23,7 +23,7 @@ const masodikOszlop = [2,5,8,11,14,17,20,23,26,29,32,35];
 const harmadikOszlop = [3,6,9,12,15,18,21,24,27,30,33,36];
 const parosok = [2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36];
 const paratlanok = [1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35];
-
+let valasztottZseton = '25zseton_.png';
 
 function porget() {
     if (porgete) {
@@ -112,6 +112,12 @@ function clearBet() {
     oneRound = 0;
     moneyDiv.innerText =  `Money = ${allMoney}`;
     bets = {}
+    zsetonkepek = document.getElementsByClassName('zsetonbet');
+    for (let index = 0; index <zsetonkepek.length; index++) {
+        const element =zsetonkepek[index];
+        element.style.display = 'none'
+        
+    }
 
 }
 function betNumber(num) {
@@ -125,9 +131,9 @@ function betNumber(num) {
             bets[num.innerText] = bet*36;
     
         }
+        num.innerHTML += `<img src="${valasztottZseton}" class="zsetonbet">`
         allMoney-=bet;
         oneRound+=bet;
-        console.log(bets);
         moneyChange();
     }
 }
@@ -148,6 +154,7 @@ function betDozen(dozen) {
                     console.log(bets)
                 }
             }
+            dozen.innerHTML += `<img src="${valasztottZseton}" class="zsetonbet">`
             allMoney-=bet;
             oneRound+=bet;
             moneyChange();
@@ -163,8 +170,10 @@ function betDozen(dozen) {
                     bets[element]= bet*3;
                 }
             }
+            dozen.innerHTML += `<img src="${valasztottZseton}" class="zsetonbet">`
             allMoney-=bet;
             oneRound+=bet;
+
             moneyChange();
         }
         else{
@@ -177,8 +186,10 @@ function betDozen(dozen) {
                     bets[element]= bet*3;
                 }
             }
+            dozen.innerHTML += `<img src="${valasztottZseton}" class="zsetonbet">`
             allMoney-=bet;
             oneRound+=bet;
+
             moneyChange();
         }
     }
@@ -197,8 +208,10 @@ function betFiftyPercent(field) {
                     bets[element] = bet*2;
                 }
             }
+            field.innerHTML += `<img src="${valasztottZseton}" class="zsetonbet">`
             allMoney-=bet;
             oneRound+=bet;
+
             moneyChange();
         }
         else if(field.innerText == '19 to 36'){
@@ -210,8 +223,10 @@ function betFiftyPercent(field) {
                     bets[element] = bet*2;
                 }
             }
+            field.innerHTML += `<img src="${valasztottZseton}" class="zsetonbet">`
             allMoney-=bet;
             oneRound+=bet;
+
             moneyChange();
         }
         else if(field.innerText == 'EVEN'){
@@ -224,8 +239,10 @@ function betFiftyPercent(field) {
                 }
                 
             }
+            field.innerHTML += `<img src="${valasztottZseton}" class="zsetonbet">`
             allMoney-=bet;
             oneRound+=bet;
+
             moneyChange();
         }
         else if(field.innerText == 'ODD'){
@@ -237,8 +254,10 @@ function betFiftyPercent(field) {
                     bets[element] = bet*2;
                 }
             }
+            field.innerHTML += `<img src="${valasztottZseton}" class="zsetonbet">`
             allMoney-=bet;
             oneRound+=bet;
+
             moneyChange();
         }
         else if(field.innerText == 'RED'){
@@ -250,8 +269,10 @@ function betFiftyPercent(field) {
                     bets[element] = bet*2;
                 }
             }
+            field.innerHTML += `<img src="${valasztottZseton}" class="zsetonbet">`
             allMoney-=bet;
             oneRound+=bet;
+
             moneyChange();
         }
         else if(field.innerText == 'BLACK'){
@@ -263,8 +284,10 @@ function betFiftyPercent(field) {
                     bets[element] = bet*2;
                 }
             }
+            field.innerHTML += `<img src="${valasztottZseton}" class="zsetonbet">`
             allMoney-=bet;
             oneRound+=bet;
+
             moneyChange();
         }
 }
@@ -286,8 +309,10 @@ function betColumn(column) {
                     bets[element] = bet*3;
                 }
             }
+            column.innerHTML += `<img src="${valasztottZseton}" class="zsetonbet">`
             allMoney-=bet;
             oneRound+=bet;
+
             moneyChange();
         }
         else if(column.innerText == '2nd column'){
@@ -299,8 +324,10 @@ function betColumn(column) {
                     bets[element] = bet*3;
                 }
             }
+            column.innerHTML += `<img src="${valasztottZseton}" class="zsetonbet">`
             allMoney-=bet;
             oneRound+=bet;
+
             moneyChange();
         }
         else{
@@ -312,8 +339,10 @@ function betColumn(column) {
                     bets[element] = bet*3;
                 }
             }
+            column.innerHTML += `<img src="${valasztottZseton}" class="zsetonbet">`
             allMoney-=bet;
             oneRound+=bet;
+
             moneyChange();
         }
     }
@@ -472,4 +501,8 @@ function noHoverColumn(col) {
     for (let index = 0; index < Nums.length; index++) {
         Nums[index].style.backgroundColor = '';
     }
+}
+function coinChanger(coinPic) {
+    bet = Number(coinPic.alt);
+    valasztottZseton = `${bet}zseton_.png`;
 }
