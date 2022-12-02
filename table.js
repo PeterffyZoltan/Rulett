@@ -90,7 +90,8 @@ function nyertE(){
     }
     bets = {};
     oneRound = 0;
-    moneyChange();
+    clearBet();
+    
 }
 
 
@@ -510,7 +511,10 @@ function coinChanger(coinPic) {
 let retardmatevaltozoja;
 
 function pickedCoin(hehe) {
-    hehe.style.backgroundColor= "orange"
+    if (!porgete) {
+        hehe.style.backgroundColor= "orange"
+        
+    }
     if (retardmatevaltozoja != null) {
         retardmatevaltozoja.style.backgroundColor="unset"
     }
