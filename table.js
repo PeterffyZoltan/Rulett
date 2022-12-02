@@ -248,7 +248,7 @@ function betFiftyPercent(field) {
         }
         else if(field.innerText == 'ODD'){
             for (let index = 0; index < paratlanok.length; index++) {
-                const element = parosok[index];
+                const element = paratlanok[index];
                 if (bets[element] > 0) {
                     bets[element] += bet*2;
                 }else{
