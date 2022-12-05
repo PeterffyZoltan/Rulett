@@ -515,7 +515,7 @@ function pickedCoin(hehe) {
         hehe.style.backgroundColor= "orange"
         
     }
-    if (retardmatevaltozoja != null) {
+    if (retardmatevaltozoja != null && retardmatevaltozoja !=hehe) {
         retardmatevaltozoja.style.backgroundColor="unset"
     }
     retardmatevaltozoja = hehe
